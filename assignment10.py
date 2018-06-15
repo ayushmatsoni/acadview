@@ -112,6 +112,7 @@ else:
 exp=0
 sav=0
 sal=0
+s=0
 class Expenditure:
     def displayresult(self, exp,sav):
         print("EXPENDITURE -->%.2f"%(exp))
@@ -119,15 +120,14 @@ class Expenditure:
         print("")
     def calculateresult(self, exp,sav):
         sal=exp+sav
-
-    def displaysalary(self, sal):
-        print("SALARY -->%.2f" % (sal))
-
+        return sal
+    def displaysalary(self,s):
+        print("TOTAL SALARY -->%.2f" % (s))
 
 exp = int(input("ENTER THE EXPENDITURE"))
 sav = int(input("ENTER THE SAVINGS"))
-
 zzz = Expenditure()
 zzz.displayresult(exp,sav)
-zzz.calculateresult(exp.sav)
-zzz.displayresult(sal)
+zzz.calculateresult(exp,sav)
+s=zzz.calculateresult(exp,sav)
+zzz.displaysalary(s)
