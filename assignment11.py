@@ -16,42 +16,56 @@ obj.tiger_attribute()
 #AB
 
 
-#QUESTION3
+# QUESTION3
 class Cop:
-    def __init__(self,name,age,workexp,desg):
-        self.name=name
-        self.age=age
+    def __init__(self, name, age, workexp, desg):
+        self.name = name
+        self.age = age
         self.workexp = workexp
         self.desg = desg
 
     @classmethod
     def add(cls):
-        cls.name=input("ENTER THE NAME")
-        cls.age=int(input("ENTER THE AGE"))
-        cls.workexp=int(input("ENTER THE WORK EXPERIENCE"))
-        cls.desg=input("ENTER THE DESIGNATION")
-        return Cop(cls.name,cls.age,cls.workexp,cls.desg)
+        cls.name = input("ENTER THE NAME")
+        cls.age = int(input("ENTER THE AGE"))
+        cls.workexp = int(input("ENTER THE WORK EXPERIENCE"))
+        cls.desg = input("ENTER THE DESIGNATION")
+        return Cop(cls.name, cls.age, cls.workexp, cls.desg)
 
     @classmethod
     def display(cls):
-        print("DETAILS OF EMPLOYEE ARE-->")
-        print("NAME-> "+cls.name)
-        print("AGE-> %d"%cls.age)
-        print("WORK EXPERIENCE--> %d" %cls.workexp)
-        print("DESIGNATION-->"+cls.desg)
+        print("")
+        print("DETAILS ARE-->")
+        print("NAME-> " + cls.name)
+        print("AGE-> %d" % cls.age)
+        print("WORK EXPERIENCE--> %d" % cls.workexp)
+        print("DESIGNATION-->" + cls.desg)
 
     def update(self):
         print("UPDATE DETAILS-->")
         self.add()
         self.display()
 
-obj1=Cop("ayush",21,5,"stu")
+
+class Mission(Cop):
+    def __init__(self, mission_details):
+        self.md =mission_details
+    def add_mission_details(self):
+        self.md=input("ENTER MISSION DETAILS--> ")
+        print("")
+        self.display()
+        print("MISSION DETAILS-->"+self.md)
+
+xyz = Mission("")
+obj1 = Cop("",0,0,"")
 obj1.add()
 obj1.display()
-ch=input("DO YOU WANT TO UPDATE THE DETAILS?(Y/N)")
-if ch=='y' or ch=='Y':
+ch = input("DO YOU WANT TO UPDATE THE DETAILS?(Y/N)")
+if ch == 'y' or ch == 'Y':
     obj1.update()
-
+ch = input("DO YOU WANT TO RUN MISSION CLASS?(Y/N)")
+if ch == 'y' or ch == 'Y':
+    xyz.add_mission_details()
 
 #QUESTION4
 
