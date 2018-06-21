@@ -12,8 +12,8 @@
 
 #question2
 #IP ADDRESS
-#Google :172.217.9.164
-#Facebook:157.240.18.35
+#GOOGLE :172.217.9.164
+#FACEBOOK:157.240.18.35
 
 
 #question3
