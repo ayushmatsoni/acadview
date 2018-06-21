@@ -59,3 +59,19 @@ print("")
 print("QUESTION6")
 #question6
 
+class AgeTooSmallError(Exception):
+    pass
+a=0
+while a<18:
+    try:
+        a = int(input("ENTER AGE"))
+
+        if a<18:
+                raise AgeTooSmallError
+                pass
+        else :
+            print(a)
+    except:
+        print("AGE LESS THAN 18 ")
+        print("try again")
+
