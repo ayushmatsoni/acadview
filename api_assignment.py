@@ -11,7 +11,10 @@
 #accesstokensecret ="sUfKfZUA1JOhmiPaI7g7tDjDXsCOqEPAgAfIzBB4hk8Xk"
 
 #question2
-#IP ADDRESS OF FACEBOOK-- 103.54.100.205
+#IP ADDRESS
+#Google :172.217.9.164
+#Facebook:157.240.18.35
+
 
 #question3
 from keys import consumerkey,consumersecret,accesstoken,accesstokensecret
