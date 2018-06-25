@@ -22,7 +22,8 @@ for i in sentence:
     y=x.sub(" ",sentence)
 print(y)
 print("")
-i=0
+
+"""
 tweet = "Good advice! RT @TheNextWeb: What I would do differently if I was learning to code today http://t.co/lbwej0pxOd cc: @garybernhardt #rstat"
 reg=re.compile("[!]")
 for i in sentence:
@@ -43,9 +44,20 @@ for i in sentence:
 #tweet=re.sub(" ",tweet)
 print(tweet)
 
-"""
+
 x=re.compile("[Good advice]^[! RT @TheNextWeb: ]^[http://t.co/lbwej0pxOd cc: @garybernhardt #rstats]")
 for i in tweet:
     y=x.sub(" ",tweet)
 print(y)
+
 """
+
+tweet = "Good advice! RT @TheNextWeb:What I would do differently if I was learning to code today http://t.co/lbwej0pxOd cc: @garybernhardt #rstats"
+tweet = re.sub('http\S+\s*', '', tweet)
+tweet = re.sub('RT|cc', '', tweet)
+tweet = re.sub('#\S+', '', tweet)
+tweet = re.sub('@\S+', '', tweet)
+tweet = re.sub('[%s]' % re.escape(""":!"""), '', tweet)
+tweet = re.sub('\s+', ' ', tweet)
+
+print(tweet)
