@@ -9,7 +9,7 @@ from tkinter import messagebox
 #ph_text_box=""
 def cmd():
     root = Tk()
-    root.title("Average Speed Checker")
+    root.title("*NEW DETAILS*")
     root.geometry("450x165")
     name_label = Label(root, text="NEW NAME")
     name_label.pack()
