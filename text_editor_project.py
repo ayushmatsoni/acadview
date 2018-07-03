@@ -12,27 +12,21 @@ def line():
     lin = "_" * 60
     text.insert(INSERT, lin)
 
-
 def date():
     data = datetime.date.today()
     text.insert(INSERT, data)
 
-
 def normal():
     text.config(font=("Arial", 10))
-
 
 def bold():
     text.config(font=("Arial", 10, "bold"))
 
-
 def underline():
     text.config(font=("Arial", 10, "underline"))
 
-
 def italic():
     text.config(font=("Arial", 10, "italic"))
-
 
 def font():
     (triple, color) = askcolor()
@@ -92,6 +86,7 @@ def about():
 
 def web():
     webbrowser.open('https://www.instagram.com/ayushmat/?hl=en')
+
 root = Tk()
 root.title("PYTHON TEXT EDITOR")
 menu = Menu(root)
