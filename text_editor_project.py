@@ -65,10 +65,11 @@ def paste():
         text.insert(INSERT, teext)
     except:
         tkMessageBox.showerror("Error", " ")
-
+"""
 def clear():
     sel = text.get(SEL_FIRST, SEL_LAST)
     text.delete(SEL_FIRST, SEL_LAST)
+"""
 
 def clearall():
     text.delete(1.0, END)
@@ -102,11 +103,11 @@ menu.add_cascade(label="Modify...", menu=modmenu)
 modmenu.add_command(label="Copy...", command=copy)
 modmenu.add_command(label="Paste...", command=paste)
 modmenu.add_separator()
-modmenu.add_command(label="Cancel...", command=clear)
-modmenu.add_command(label="Cancel All...", command=clearall)
+#modmenu.add_command(label="Cancel...", command=clear)
+modmenu.add_command(label="Clear All...", command=clearall)
 insmenu = Menu(root)
 menu.add_cascade(label="Insert...", menu=insmenu)
-insmenu.add_command(label="Data...", command=date)
+insmenu.add_command(label="Date...", command=date)
 insmenu.add_command(label="Line...", command=line)
 formatmenu = Menu(menu)
 menu.add_cascade(label="Format...", menu=formatmenu)
