@@ -90,6 +90,27 @@ def about():
 
 def web():
     webbrowser.open('https://www.instagram.com/ayushmat/?hl=en')
+    
+def cut(event=None):
+        text.event_generate("<<Cut>>")
+        return
+
+def undo(event=None):
+        text.event_generate("<<Undo>>")
+        return
+
+def redo(event=None):
+        text.event_generate("<<Redo>>")
+        return
+
+
+def select_all(event=None):
+        text.tag_add("sel",'1.0','end')
+        return
+def deselect_all(event=None):
+        text.tag_remove("sel",'1.0','end')
+        return
+    
 
 root = Tk()
 root.title("PYTHON TEXT EDITOR")
@@ -101,13 +122,21 @@ filemenu.add_command(label="Open...", command=opn)
 filemenu.add_command(label="Save...", command=save)
 filemenu.add_separator()
 filemenu.add_command(label="EXIT", command=kill)
+
 modmenu = Menu(root)
 menu.add_cascade(label="Modify...", menu=modmenu)
+modmenu.add_command(label="Cut...", command=cut)
 modmenu.add_command(label="Copy...", command=copy)
-modmenu.add_command(label="Paste...", command=paste)
+modmenu.add_command(label="Paste", command=paste)
 modmenu.add_separator()
-#modmenu.add_command(label="Cancel...", command=clear)
 modmenu.add_command(label="Clear All...", command=clearall)
+modmenu.add_separator()
+modmenu.add_command(label="Undo...", command=undo)
+modmenu.add_command(label="Redo...", command=redo)
+modmenu.add_separator()
+modmenu.add_command(label="Select All...", command=select_all)
+modmenu.add_command(label="DeSelect All...", command=deselect_all)
+
 insmenu = Menu(root)
 menu.add_cascade(label="Insert...", menu=insmenu)
 insmenu.add_command(label="Date...", command=date)
